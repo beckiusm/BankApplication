@@ -1,6 +1,8 @@
 <?php
 
-class DB
+namespace bankApp;
+
+class Database
 {
     private $host;
     private $port;
