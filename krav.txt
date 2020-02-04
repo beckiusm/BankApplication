@@ -32,3 +32,20 @@ public function __construct(Database $db) {
 Tips: En klass kan både implementera ett interface och ärva från en basklass: https://stackoverflow.com/questions/652157/can-a-class-extend-both-a-class-and-implement-an-interface
 
 Konton ska ha en viss valuta och överföringar ska kunna ske mellan konton i olika valutor. Om Kalle använder SEK i sitt konto och Olle använder USD ska en överföring visa t ex -89,68 (SEK) på Kalles konto och +10 (USD) på Olles För att det ska fungera måste ni på PHP-sidan hämta valutakurser från exempelvis det API vi använde häromdagen: https://exchangeratesapi.io/ 
+
+
+GJORT
+-------
+"INLOGGNING"
+DATABASE
+ÖVERFÖRING
+DEPENDENCY INJECTION
+TA EMOT PAGE FÖR ÖVERFÖRING
+API CURRENCY CONVERSION
+SWISH
+
+SAKNAS
+-------
+
+HALVGJORT
+-------
