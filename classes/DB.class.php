@@ -19,11 +19,11 @@ class Database
         $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
         $dotenv->load();
 
-        $this->host = getenv("DB_ADDRESS");
+        $this->host = getenv("DB_HOST");
         $this->port = getenv("DB_PORT");
-        $this->db = getenv("DB_NAME");
+        $this->db = getenv("DB_DATABASE");
         $this->user = getenv("DB_USER");
-        $this->pass = getenv("DB_PASSWORD");
+        $this->pass = getenv("DB_PASS");
         $this->charset = 'utf8mb4';
         $this->options = [
             \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
