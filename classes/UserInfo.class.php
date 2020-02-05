@@ -33,6 +33,6 @@ class UserInfo
         $stmt = $this->db->prepare("SELECT account_id FROM vw_users where mobilephone = ?");
         $stmt->execute([$number]);
         $result = $stmt->fetch();
-        return $result["id"];
+        return $result["account_id"];
     }
 }
