@@ -1,6 +1,6 @@
 $.get("userlist.php", function(data) { // get userlist from api
     $.each(JSON.parse(data), function (i, element) {
-        $("#userTable tbody").append("<tr><td>" + element.firstName + " " + element.lastName + "</td><td>" + element.id + "</td><td>" + element.mobilephone + "</td>");
+        $("#userTable tbody").append("<tr><td>" + element.firstName + " " + element.lastName + "</td><td>" + element.account_id + "</td><td>" + element.mobilephone + "</td>");
     })
 });
 

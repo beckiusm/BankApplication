@@ -48,7 +48,7 @@ class Transaction implements Transactions
     }
 
     public function checkIfUserExists($user) { // check if user exists
-        $stmt = $this->db->prepare("SELECT * FROM users WHERE id = ?");
+        $stmt = $this->db->prepare("SELECT * FROM vw_users WHERE account_id = ?");
         $stmt->execute([$user]);
         if ($stmt->rowCount() === 0) {
             throw new \Exception("Specified user does not exist");
