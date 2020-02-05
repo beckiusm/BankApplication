@@ -19,7 +19,7 @@ if (isset($_POST["toUser"]) && isset($_POST["type"]) && isset($_POST["amount"]))
     $toUser = filter_input(INPUT_POST, "toUser", FILTER_SANITIZE_NUMBER_INT);
     $type = filter_input(INPUT_POST, "type", FILTER_SANITIZE_STRING);
     $amount = filter_input(INPUT_POST, "amount", FILTER_SANITIZE_NUMBER_INT);
-    $fromUser = 3;
+    $fromUser = 17;
     try {
         if ($type === "Swish") { // try to send money
             $swishTransaction->sendMoney($fromUser, $toUser, $amount);
