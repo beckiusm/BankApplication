@@ -4,7 +4,7 @@ $.get("userlist.php", function(data) { // get userlist from api
     })
 });
 
-function sendMoney() {
+function sendMoney() { // send ajax post request
 	let toUser = $("#toUser").val();
     let type = $("#type").val();
     let amount = $("#amount").val();
@@ -17,14 +17,14 @@ function sendMoney() {
             toUser: toUser,
             amount: amount
         },
-        success: function(data) {
+        success: function(data) { // print message returned 
             $("#message").html(data);
         }
     });
 }
 
 
-$("#sendMoney").submit( (e) => {
+$("#sendMoney").submit( (e) => { // ajax request button
     e.preventDefault();
     sendMoney();
     return false;
