@@ -43,7 +43,7 @@ class Transaction implements Transactions
             $stmt->bindValue(":to_currency", $toCurrency, \PDO::PARAM_STR);
             $stmt->bindValue(":currency_rate", ($amount / $toAmount), \PDO::PARAM_STR);
             $stmt->execute();
-            echo "<p>Sent $amount $fromCurrency to account id $toUser as a $this->typeOfTransaction transaction.</p>";
+            echo json_encode(["amount" => $amount, "currency" => $fromCurrency, "recipient" => $toUser, "type" => $this->typeOfTransaction ]);
         }
     }
 

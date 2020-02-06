@@ -17,8 +17,9 @@ function sendMoney() { // send ajax post request
             toUser: toUser,
             amount: amount
         },
-        success: function(data) { // print message returned 
-            $("#message").html(data);
+        success: function(data) { // print message returned
+            data = JSON.parse(data);
+            $("#message").html("You sent " + data.amount + " " + data.currency + " to account id " + data.recipient + " as a " + data.type + " transfer.");
         }
     });
 }
